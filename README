@@ -7,7 +7,6 @@ Helps solve liquidity problems on Uniswap without any protocol upgrades.
 
 dApp:
 https://ulock.eth
-https://bafybeiaip7nknvsugkgou6jzsgtmfiooau54q2m3xgt4r2z72t23t46e4m.ipfs.dweb.link/
 
 How it works:
 When liquidity is locked on a capped token, no more than the cap minus locked reserves can be sold.
@@ -19,6 +18,6 @@ Thus all circulating xEth is 1:1 backed by Eth.
 Feel free to farm the Eth/xEth pair or run arbitration bots between the xEth wrapper and the Uniswap pair.
 
 Mainnet
-xeth:          0x395C8dB957d743a62Ac3aAAa4574553bcf2380b3
-xlocker:       0x7cA5FB20FDD54867e250436c4A9686ceeB88A18B
-xEth/Eth pair: 0x952a51ca1e6267bcbca6212d2c3a67abf5195017
+xeth:          0x82Abd3a19C459829692ceDb1Ce525fB22a9B9B37
+xlocker:       0xb56f00bD5E026913C13db85b8dc5548C7293Da7B
+xEth/Eth pair: Coming soon
