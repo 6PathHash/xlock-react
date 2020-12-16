@@ -4,21 +4,17 @@ import IXETH from "./abi/IXETH.json";
 import addresses from "./addresses.json";
 import useWeb3Modal from "./hooks/useWeb3Modal.js";
 import Header from "./components/Header.js";
-import Logo from './components/Logo'
+import Logo from "./components/Logo";
 import TokenLauncher from "./components/TokenLauncher.js";
 import XethWrapper from "./components/XethWrapper.js";
 import Info from "./components/Info.js";
 import Footer from "./components/Footer.js";
 import Modal from "./components/Modal.js";
 
-
 function App() {
   const [requestConnect, setRequestConnect] = useState(0);
   const [requestCacheReset, setRequestCacheReset] = useState(null);
-  const { web3, account } = useWeb3Modal(
-    requestConnect,
-    requestCacheReset
-  );
+  const { web3, account } = useWeb3Modal(requestConnect, requestCacheReset);
   const [modalTitle, setModalTitle] = useState(null);
   const [modalBody, setModalBody] = useState(null);
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -28,15 +24,15 @@ function App() {
 
   useEffect(() => {
     if (!web3 || !account) return;
-    const xethContract = new web3.eth.Contract(IXETH, addresses.mainnet.xeth, {
+    const xethSC = new web3.eth.Contract(IXETH, addresses.mainnet.xeth, {
       from: account
     });
-    setXeth(xethContract);
+    setXeth(xethSC);
     (async () => {
-      const accountXethContract = await xeth.methods.balanceOf(account).call();
-      setAccountXeth(accountXethContract);
+      const accountXeth = await xethSC.methods.balanceOf(account).call();
+      setAccountXeth(accountXeth);
     })();
-  }, [web3, account, xeth.methods]);
+  }, [web3, account]);
 
   return (
     <div className="App">
