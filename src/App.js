@@ -15,7 +15,7 @@ import Modal from "./components/Modal.js";
 function App() {
   const [requestConnect, setRequestConnect] = useState(0);
   const [requestCacheReset, setRequestCacheReset] = useState(null);
-  const { provider, web3, account } = useWeb3Modal(
+  const { web3, account } = useWeb3Modal(
     requestConnect,
     requestCacheReset
   );
@@ -28,15 +28,15 @@ function App() {
 
   useEffect(() => {
     if (!web3 || !account) return;
-    const xeth = new web3.eth.Contract(IXETH, addresses.mainnet.xeth, {
+    const xethContract = new web3.eth.Contract(IXETH, addresses.mainnet.xeth, {
       from: account
     });
-    setXeth(xeth);
+    setXeth(xethContract);
     (async () => {
-      const accountXeth = await xeth.methods.balanceOf(account).call();
-      setAccountXeth(accountXeth);
+      const accountXethContract = await xeth.methods.balanceOf(account).call();
+      setAccountXeth(accountXethContract);
     })();
-  }, [web3, account]);
+  }, [web3, account, xeth.methods]);
 
   return (
     <div className="App">

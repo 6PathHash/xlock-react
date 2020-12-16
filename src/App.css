@@ -127,6 +127,7 @@ p {
 .App-header-logo__sub-text {
   color: #52CAFF;
   font-size: 22px;
+  padding-top: 10px;
 }
 
 .App-header-button {

@@ -1,5 +1,4 @@
 import React from 'react'
-import XLock from './xLock.js'
 
 function Header({
   web3,
@@ -13,7 +12,6 @@ function Header({
   return (
     <React.Fragment>
     <header className="App-header">
-      {/* <img src={ipfsMediaSrc("logo-h.svg")} className="App-header-logo" /> */}
       {web3 == null ? (
         <button
           className="App-header-button"
