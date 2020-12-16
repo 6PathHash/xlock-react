@@ -87,7 +87,7 @@ function TokenLauncher({
       />
       <br />
       <br />
-      <h2>Liq to Lock (xETH)</h2>
+      <h2>Liquidity to Lock (xETH)</h2>
       <input
         type="number"
         placeholder="0.0"
