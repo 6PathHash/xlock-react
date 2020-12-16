@@ -24,15 +24,15 @@ function Header({
       ) : (
         <>
           {!!account ? (
-            <p className="App-header-Address">
+            <div className="App-header-Address">
               Connected account:
               <br />
               {account}
               <br />
               xETH: {Number(web3.utils.fromWei(accountXeth)).toPrecision(10)}
-            </p>
+            </div>
           ) : (
-            <p className="App-header-Address">
+            <div className="App-header-Address">
               No Account: Reset cache then refresh the page.
               <br />
               <button
@@ -40,7 +40,7 @@ function Header({
               >
                 Reset Cache
               </button>
-            </p>
+            </div>
           )}
         </>
       )}
