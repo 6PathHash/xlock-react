@@ -1,10 +1,10 @@
 {
     "mainnet":{
-        "xeth":    "0x82Abd3a19C459829692ceDb1Ce525fB22a9B9B37",
-        "xlocker": "0xb56f00bD5E026913C13db85b8dc5548C7293Da7B"
+        "xeth":    "0x29B109625ac15BC4577d0b70ACB9e4E27F7C07E8",
+        "xlocker": "0xAA13f1Fc73baB751Da08930007D4D847EeEafAA2"
     },
     "ropsten":{
-        "xeth":    "0x9C2C7007B5FC7023d2b8d5E3eA9Aa97c6D6F506F",
-        "xlocker": "0x7ee43A57Dc6c1D46a28140CCFe572011025b583d"
+        "xeth":    "0xA2F864C1c1a27f257c10FfBCFAeCa252B5610B4b",
+        "xlocker": "0x45a0A95Df3DAE8A9741328a0b7ce04DF55C22124"
     }
 }
